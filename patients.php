@@ -120,6 +120,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            background-color: #FF6600;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #e65c00;
+        }
         .search-bar {
             margin-top: 20px;
             display: flex;
@@ -172,12 +192,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
         <img src="logo.png" alt="Afya Bora Logo">
         <a href="login.php">Logout</a>
     </div>
-    <div class="main" style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
-    <div>
-        <a href="activechats.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
-            View Existing Chats
-        </a>
-    </div>
+    <div class="main">
+        <div class="button-container">
+            <a href="activechats.php" class="button">View Existing Chats</a>
+            <a href="appointments.php" class="button">Appointments</a>
+        </div>
         <div class="profile-container">
             <h1>Patient Profile</h1>
             <div class="field">
@@ -206,9 +225,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
                         <li>
                         <strong>Doctor ID:</strong> <?php echo htmlspecialchars($result['doctor_id']); ?><br>
                         <strong>Name:</strong> <?php echo htmlspecialchars($result['first_name'] . ' ' . $result['last_name']); ?><br>
-                         <strong>Speciality:</strong> <?php echo htmlspecialchars($result['speciality']); ?><br>
-                         <strong>Email:</strong> <?php echo htmlspecialchars($result['email']); ?><br>
+                        <strong>Speciality:</strong> <?php echo htmlspecialchars($result['speciality']); ?><br>
+                        <strong>Email:</strong> <?php echo htmlspecialchars($result['email']); ?><br>
                         <a href="chat.php?doctor_id=<?php echo $result['doctor_id']; ?>">Chat</a>
+                        <a href="bookappointment.php?doctor_id=<?php echo $result['doctor_id']; ?>">Book Appointment</a>
                         </li>
                     <?php endforeach; ?>
                     </ul>
