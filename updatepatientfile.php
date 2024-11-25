@@ -52,8 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Execute the query and check if the insertion was successful
     if ($stmt->execute()) {
-        // Redirect to a confirmation page or display a success message
-        echo "<p style='color: orange; font-weight: bold;'>Medical record saved successfully!</p>";
+        // Set success message in session
+        $_SESSION['success_message'] = "Medical record saved successfully!";
+        
+        // Redirect to doctors.php
+        header("Location: doctors.php");
+        exit;
     } else {
         echo "Error saving record: " . $stmt->error;
     }
@@ -225,7 +229,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="form-group">
                     <label>
                         <input type="checkbox" id="meds_prescribed" name="meds_prescribed" onchange="togglePrescriptionField()">
-                        Medications Prescribed?
+                        Were Medications Prescribed?
                     </label>
                     <textarea id="prescription" name="prescription" class="prescription-field" placeholder="Enter prescription details"></textarea>
                 </div>
