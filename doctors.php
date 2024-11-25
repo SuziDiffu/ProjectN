@@ -74,6 +74,22 @@ if (!$doctor) {
             justify-content: center;
             padding: 20px;
         }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Adds spacing between buttons */
+        }
+        .button-container a {
+            display: block;
+            background-color: #FF6600;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
         .profile-container {
             background: white;
             padding: 20px;
@@ -118,16 +134,10 @@ if (!$doctor) {
         <a href="login.php">Logout</a>
     </div>
     <div class="main" style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
-        <div>
-            <a href="viewmessages.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center; margin-bottom: 10px;">
-                View Messages
-            </a>
-            <a href="upcomingappointments.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
-                Upcoming Appointments
-            </a>
-            <a href="updatepatientfile.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
-                Update Patient File
-            </a>
+        <div class="button-container">
+            <a href="viewmessages.php">View Messages</a>
+            <a href="upcomingappointments.php">Upcoming Appointments</a>
+            <a href="updatepatientfile.php">Update Patient File</a>
         </div>
         <div class="profile-container">
             <h1>Doctor Profile</h1>
