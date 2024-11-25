@@ -106,7 +106,7 @@ $result_records = $stmt_records->get_result();
     <div class="header">
         <img src="logo.png" alt="Afya Bora Logo">
         <a href="patients.php">Back</a>
-        <a href="logout.php">Logout</a>
+        <a href="login.php">Logout</a>
     </div>
     <div class="main">
         <h1>My Medical Records</h1>
