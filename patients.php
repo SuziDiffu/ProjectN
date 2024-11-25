@@ -196,6 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['search'])) {
         <div class="button-container">
             <a href="activechats.php" class="button">View Existing Chats</a>
             <a href="appointments.php" class="button">Appointments</a>
+            <a href="medicalrecords.php" class="button">View Medical Records</a>
         </div>
         <div class="profile-container">
             <h1>Patient Profile</h1>
