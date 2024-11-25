@@ -118,8 +118,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             text-align: left;
         }
         .expired-table th {
-            background-color: #003300;
-            color: white;
+            background-color: #FF6600; /* Orange background for table headings */
+            color: white; /* White text for table headings */
         }
         .form-container {
             width: 80%;
@@ -157,7 +157,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             display: block;
         }
         .form-group button {
-            background-color: #003300;
+            background-color: #FF6600; /* Orange background for button */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -165,7 +165,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             cursor: pointer;
         }
         .form-group button:hover {
-            background-color: #005500;
+            background-color: #cc5200; /* Darker orange shade on hover */
         }
         footer {
             background-color: #003300;
