@@ -179,7 +179,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="header">
         <img src="logo.png" alt="Afya Bora Logo">
-        <a href="doctors.php.php">Back</a>
+        <a href="doctors.php">Back</a>
         <a href="login.php">Logout</a>
     </div>
     <div class="main">
