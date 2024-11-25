@@ -118,40 +118,45 @@ if (!$doctor) {
         <a href="login.php">Logout</a>
     </div>
     <div class="main" style="display: flex; justify-content: center; align-items: flex-start; gap: 20px;">
-    <div>
-        <a href="viewmessages.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
-            View Messages
-        </a>
+        <div>
+            <a href="viewmessages.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center; margin-bottom: 10px;">
+                View Messages
+            </a>
+            <a href="upcomingappointments.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
+                Upcoming Appointments
+            </a>
+            <a href="updatepatientfile.php" style="display: block; background-color: #FF6600; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; text-align: center;">
+                Update Patient File
+            </a>
+        </div>
+        <div class="profile-container">
+            <h1>Doctor Profile</h1>
+            <div class="field">
+                <label>Doctor ID:</label>
+                <p><?php echo htmlspecialchars($doctor['doctor_id']); ?></p>
+            </div>
+            <div class="field">
+                <label>First Name:</label>
+                <p><?php echo htmlspecialchars($doctor['first_name']); ?></p>
+            </div>
+            <div class="field">
+                <label>Last Name:</label>
+                <p><?php echo htmlspecialchars($doctor['last_name']); ?></p>
+            </div>
+            <div class="field">
+                <label>Speciality:</label>
+                <p><?php echo htmlspecialchars($doctor['speciality']); ?></p>
+            </div>
+            <div class="field">
+                <label>Email:</label>
+                <p><?php echo htmlspecialchars($doctor['email']); ?></p>
+            </div>
+            <div class="field">
+                <label>Phone Number:</label>
+                <p><?php echo htmlspecialchars($doctor['phone_number']); ?></p>
+            </div>
+        </div>
     </div>
-    <div class="profile-container">
-        <h1>Doctor Profile</h1>
-        <div class="field">
-            <label>Doctor ID:</label>
-            <p><?php echo htmlspecialchars($doctor['doctor_id']); ?></p>
-        </div>
-        <div class="field">
-            <label>First Name:</label>
-            <p><?php echo htmlspecialchars($doctor['first_name']); ?></p>
-        </div>
-        <div class="field">
-            <label>Last Name:</label>
-            <p><?php echo htmlspecialchars($doctor['last_name']); ?></p>
-        </div>
-        <div class="field">
-            <label>Speciality:</label>
-            <p><?php echo htmlspecialchars($doctor['speciality']); ?></p>
-        </div>
-        <div class="field">
-            <label>Email:</label>
-            <p><?php echo htmlspecialchars($doctor['email']); ?></p>
-        </div>
-        <div class="field">
-            <label>Phone Number:</label>
-            <p><?php echo htmlspecialchars($doctor['phone_number']); ?></p>
-        </div>
-    </div>
-</div>
-
     <footer>
         <p>Afya Bora, Copyright &copy; <?php echo date('Y'); ?></p>
     </footer>
